@@ -10,11 +10,13 @@ class PigLatinizer
     words = text.split
     words.map do |word|
       idx = first_vowel_index(word)
+      string = []
       if idx == 0
-        return word + "way"
+        string = word + "way"
       else
-        return word.slice(idx..-1) + word[0...idx] + "ay"
+        string = word.slice(idx..-1) + word[0...idx] + "ay"
       end
+      string
     end
     words.join(" ")
   end
