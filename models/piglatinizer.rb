@@ -24,7 +24,7 @@ class PigLatinizer
   def first_vowel_index (word)
     idx = 0
     word.length.times do
-      break if %w(a e i o u).include?(word[idx])
+      break if %w(a e i o u).include?(word[idx].downcase)
       idx += 1
     end
     idx
