@@ -8,7 +8,7 @@ class PigLatinizer
 
   def piglatinize(text)
     words = text.split
-    words.map do |word|
+    words.map! do |word|
       idx = first_vowel_index(word)
       if idx == 0
         word + "way"
